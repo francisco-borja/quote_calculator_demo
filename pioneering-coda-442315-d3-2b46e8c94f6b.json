@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "pioneering-coda-442315-d3",
+  "private_key_id": "2b46e8c94f6b20cfde6fcf7f1b92b96a397881c5",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCjHEd2VvQCDQgb\n9GMt4WDo4M6perZ8qu32AvjRyVTqrhEHcUXJL6bgo9ZOSsB/lipKOTRsns9uLObA\n25X/kYpG1KAPotEjz96d75uafDXJNXfrLyTA4hfc0zmsRoI1CH2FugfKyU0X340u\ngE0uDCVuvoO4bKjMeJP+3jgHu/GNQjDHmM4O6/uL9dd54e6aQcVlGQjI8b+htJD5\nnw/yFO+JR4W39X4Fi4cjqG4wYVbW8xtOREnd4vda6ZRPcv3t+PBV4x3D9bC6GaH3\n5054vTOm26BVqGdXxqoZpOYfgtuuagEuwtXDM9lcQUKu1oGa4hvPHAEKmtofA2Lh\nys7SI3iNAgMBAAECggEAAOUlyKYFAq7e7MWMUGMXsYESuUNGYmXb8CXt7VUyw7/u\n5LDP/np/t36Tej+dEblf/YmVuoPey3HwVgroDMYLPkTD8ebSYxhf4yBLWEKjilL8\nCu/p2BIiXRcFDo3R5wGAxaQl9bLhmxNiI09w1paAxq903X7HjvZ/1dEsrKQw8oK+\n3vsGlPU4vZuvejwRb8tP2nchJOlANjnW7ORZ/in7K7QizuewPz4GBjQeGyvSrXmk\n2GHRZ46umX4tlc05Gizqm2hVIMDdkMHOBFNns8IU4ef/6e8qymLPtYtvXDVK34AJ\nlqbNSH1to4mhoCuV5m8ButZdIMeoU0aSKROyUs1+6QKBgQDlvzLW6YSpG6WmzDsg\ntHpZtl1lq/KCrnv5+J4rPuugl2kQ5Ydo7DyJgzdEdo4R4hyCFewFYn1xPeDO+ang\nraHYQLOQC61UZj1eZajC+9wyQwPLSHzXn7rEVjdlGoEEOoRB1d/+eyUbSxb9gx8q\nJvGogfgg77/GVH125Xrf3q+eZQKBgQC1v8LYzKOl+7OIUpRaeE39Hr9U7appEBVt\nBUpu9OEbWZLs8fcaYUHYoRamejR3iAYYytMQJX3Tt8K1nmI4aF2ntSKlCpt8YNYg\nGgprxH91otm0SMwXR5SIFfcpyv5LxECnHj2JGIBBK3zLWDImE2DVpCCE2zH8GZtt\nm0C8cvVbCQKBgQCHXY5A3joRwX5qtq6n6G6maTLCcvtiUBgwAnJ/HIWMi2mWUQbl\npTtN8ogfyJKQqt8NLolv6sXqcQECMkwLW4KefhDOcHLh5ZOHCPLUX70vyBh2L/GO\nwkgy4nGlGmal7Sx79d4SfNAyMp4LJLS6C1Qbauidz2T5IFMEONWbDgP/mQKBgFOm\n0zOd3KSE2PkhqQ6K2Lpr8HxSd2Cr+nCXQs8W/pTsAWf1ZlpJ8ViXrCkrjgKGJOg8\nUjDYULWlmoSlRWfZAWIzSKLV4wK4P1W/JpS7eD7YmYMVDnqYg5CvK3ec6rZMucUx\ncfkrwbw9G88r5MkJmkQ6qoz7pmH2F0e3cXBLKQqhAoGAQLLKxzSJgazJnD5VrwyS\nX3Ekdwr3HcmhVpRNDiFnaf9cenzr4yAVev1IryL3khzPfEEgLDk4qucI0Y/zp/n9\n3N1MMLMwq5pn9J36lgVUjHekdBlXLf9bZF4+to51tStt9MWVUVUsAog8w8rt45Ol\nyf2RG2ZhejGgS5eaWN/6oMI=\n-----END PRIVATE KEY-----\n",
+  "client_email": "google-sheets-python-cotizador@pioneering-coda-442315-d3.iam.gserviceaccount.com",
+  "client_id": "107344201782220368851",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/google-sheets-python-cotizador%40pioneering-coda-442315-d3.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

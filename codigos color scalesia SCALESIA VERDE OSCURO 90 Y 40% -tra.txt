@@ -1,0 +1,8 @@
+SCALESIA VERDE OSCURO 90 Y 40% -transparencia
+HEX: #4c8c2b
+
+SCALESIA VERDE CLARO 70 Y 50% -transparencia
+HEX: ##4c8c2b
+
+SCALESIA CELESTE 100%  -transparencia
+HEX: #64ccc9
