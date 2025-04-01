@@ -8,7 +8,7 @@ import streamlit as st
 from datetime import datetime, timedelta
 import pandas as pd
 import gspread
-from oauth2client.service_account import ServiceAccountCredentials
+from google.oauth2 import service_account
 from PIL import Image
 import base64
 from fpdf import FPDF
@@ -132,8 +132,7 @@ st.markdown(
 @st.cache_data(show_spinner=True)
 def load_data_from_google_sheets(sheet_url, sheet_name):
     try:
-        scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-        creds = ServiceAccountCredentials.from_json_keyfile_name('famous-dialect-433116-n5-ca129ce868dc.json', scope)
+        creds = service_account.Credentials.from_service_account_info(st.secrets["gcp_service_account"])
         client = gspread.authorize(creds)
         sheet = client.open_by_url(sheet_url).worksheet(sheet_name)
         data = pd.DataFrame(sheet.get_all_records())
@@ -141,7 +140,7 @@ def load_data_from_google_sheets(sheet_url, sheet_name):
     except Exception as e:
         st.error(f"Error loading data from Google Sheets: {e}")
         return pd.DataFrame()  # Retornar un DataFrame vacío en caso de error
-    
+
     
 
 ## Función genérica para calcular costos con servicios detallados
