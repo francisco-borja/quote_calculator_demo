@@ -133,7 +133,7 @@ st.markdown(
 def load_data_from_google_sheets(sheet_url, sheet_name):
     try:
         scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-        creds = ServiceAccountCredentials.from_json_keyfile_name('pioneering-coda-442315-d3-2b46e8c94f6b.json', scope)
+        creds = ServiceAccountCredentials.from_json_keyfile_name('famous-dialect-433116-n5-ca129ce868dc.json', scope)
         client = gspread.authorize(creds)
         sheet = client.open_by_url(sheet_url).worksheet(sheet_name)
         data = pd.DataFrame(sheet.get_all_records())
@@ -642,7 +642,7 @@ def calcular_costo_baltra_airport_assistance_continental_flight(num_people, df_c
 
 
 # Cargar datos desde Google Sheets (se ejecuta solo una vez por sesión)
-sheet_url = "https://docs.google.com/spreadsheets/d/1tQiVvPvshau7m0x7dFm3qwv9S1Dh71pXp0t2ZGQiS20/edit?gid=1764539805#gid=1764539805"
+sheet_url = "https://docs.google.com/spreadsheets/d/1R_1AuEU2x08ugevXYWH9ezgnW1XuTI2fRTnbwcKZINU/edit?gid=0#gid=0"
 sheet_name_seleccionables = "Lista de Seleccionables"
 sheet_name_costos_persona_grupo = "Costos Por persona y Por Grupo"
 
