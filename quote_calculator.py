@@ -18,24 +18,25 @@ from reportlab.pdfgen import canvas
 from io import BytesIO
 
 #Cargar la imagen del logo
-
+"""
 # Cargar la imagen del logo
 logo_path = "Logo JPG Blanco - Scalesia Lodge.jpg"
 
-logo = Image.open(logo_path)
+#logo = Image.open(logo_path)
 
 # Convertir la imagen a base64
-with open(logo_path, "rb") as img_file:
-    logo_base64 = base64.b64encode(img_file.read()).decode()
-
+#with open(logo_path, "rb") as img_file:
+ #   logo_base64 = base64.b64encode(img_file.read()).decode()
+"""
 # Configuración de la página
-st.set_page_config(page_title="Scalesia Lodge Quote Calculator", layout="centered",
+st.set_page_config(page_title="Quote Calculator", layout="centered",
                    
     )
 
 # Estilos personalizados con los colores proporcionados y para centrar la imagen
+"""
 st.markdown(
-    f"""
+    f
     <style>
     /* Colores */
     .dark-green-bg {{
@@ -123,10 +124,10 @@ st.markdown(
     </div>
     
     
-    """,
+    ,
     unsafe_allow_html=True
 )
-
+"""
 
 # Función para manejar excepciones y conectar a Google Sheets
 @st.cache_data(show_spinner=True)
@@ -228,7 +229,7 @@ def generar_pdf(day_services_df_list, hotel_cost_df, total_df, num_people, num_n
 
     # Título del PDF
     c.setFont("Helvetica-Bold", 16)
-    c.drawString(100, height - 50, "Scalesia Lodge Quote Calculator - Quotation")
+    c.drawString(100, height - 50, "Quotation")
 
     y_position = height - 100
 
@@ -250,7 +251,7 @@ def generar_pdf(day_services_df_list, hotel_cost_df, total_df, num_people, num_n
         y_position -= 10  # Espacio adicional entre días
 
     # Agregar el costo del hotel
-    c.drawString(100, y_position, "Isabela Hotel Cost:")
+    c.drawString(100, y_position, "Hotel Cost:")
     y_position -= 20
     c.drawString(100, y_position, f"- {hotel_cost_df.iloc[0]['Description']}, cost per person and night: ${hotel_cost_df.iloc[0]['Cost per person']} (Total Cost: ${hotel_cost_df.iloc[0]['Group Cost']})")
     y_position -= 30
