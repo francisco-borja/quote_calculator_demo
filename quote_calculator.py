@@ -18,116 +18,22 @@ from reportlab.pdfgen import canvas
 from io import BytesIO
 
 #Cargar la imagen del logo
-"""
+
 # Cargar la imagen del logo
 logo_path = "Logo JPG Blanco - Scalesia Lodge.jpg"
 
-#logo = Image.open(logo_path)
+logo = Image.open(logo_path)
 
 # Convertir la imagen a base64
-#with open(logo_path, "rb") as img_file:
- #   logo_base64 = base64.b64encode(img_file.read()).decode()
-"""
+with open(logo_path, "rb") as img_file:
+    logo_base64 = base64.b64encode(img_file.read()).decode()
+
 # Configuración de la página
 st.set_page_config(page_title="Quote Calculator", layout="centered",
                    
     )
 
-# Estilos personalizados con los colores proporcionados y para centrar la imagen
-"""
-st.markdown(
-    f
-    <style>
-    /* Colores */
-    .dark-green-bg {{
-        background-color: rgba(76, 140, 43, 0.9); /* SCALESIA VERDE OSCURO 90% */
-        color: white;
-    }}
-    .dark-green-bg-light {{
-        background-color: rgba(76, 140, 43, 0.4); /* SCALESIA VERDE OSCURO 40% */
-    }}
-    .light-green-bg {{
-        background-color: rgba(76, 140, 43, 0.7); /* SCALESIA VERDE CLARO 70% */
-    }}
-    .light-green-bg-lighter {{
-        background-color: rgba(76, 140, 43, 0.5); /* SCALESIA VERDE CLARO 50% */
-    }}
-    .celeste-bg {{
-        background-color: #64ccc9; /* SCALESIA CELESTE 100% */
-    }}
-    
-    /* Botón de cotización */
-    .stButton > button {{
-        background-color: rgba(76, 140, 43, 0.7); /* Verde claro para botón */
-        color: white;
-        border-radius: 5px;
-        border: 2px solid #64ccc9; /* Detalle celeste */
-    }}
-    .stButton > button:hover {{
-        background-color: rgba(76, 140, 43, 0.5); /* Verde claro 50% en hover */
-        border: 2px solid #4c8c2b; /* Verde oscuro en hover */
-    }}
 
-    /* Título en verde oscuro */
-    .title {{
-        font-size: 2.5em;
-        color: rgba(76, 140, 43, 0.9); /* Verde oscuro */
-        text-align: center;
-        margin-bottom: 20px;
-    }}
-
-    /* Contenedor principal */
-    .main-container {{
-        padding: 10px;
-        background-color: rgba(76, 140, 43, 0.4); /* Verde oscuro 40% */
-        border-radius: 10px;
-        border: 3px solid #64ccc9; /* Detalle celeste */
-    }}
-
-    /* Textos y selectores */
-    .stTextInput label, .stSelectbox label {{
-        color: rgba(76, 140, 43, 0.9); /* Verde oscuro */
-        font-weight: bold;
-    }}
-
-    /* Bordes de tablas y inputs */
-    .stDataFrame, .stMultiselect {{
-        border: 2px solid rgba(76, 140, 43, 0.9); /* Bordes en verde oscuro */
-    }}
-
-    /* Imagen centrada y tamaño ajustado */
-    .logo {{
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 40%; /* Ajusta el tamaño de la imagen, puedes modificar este valor para hacerla más grande o más pequeña */
-    }}
-    /* Color personalizado para los selectores de servicios */
-    [data-baseweb="select"] {{
-        background-color: #4c8c2b; /* Verde Scalesia */
-        color: white; /* Texto blanco */
-    }}
-    [data-baseweb="select"]::placeholder {{
-        color: white; /* Placeholder blanco */
-    }}
-    .stSelectbox > div > div {{
-        color: white; /* Texto blanco en los selectores */
-    
-    }}
-    
-    
-    </style>
-
-    <!-- Mostrar el logo centrado -->
-    <div>
-        <img src="data:image/jpg;base64,{logo_base64}" class="logo">
-    </div>
-    
-    
-    ,
-    unsafe_allow_html=True
-)
-"""
 
 # Función para manejar excepciones y conectar a Google Sheets
 @st.cache_data(show_spinner=True)
@@ -229,7 +135,7 @@ def generar_pdf(day_services_df_list, hotel_cost_df, total_df, num_people, num_n
 
     # Título del PDF
     c.setFont("Helvetica-Bold", 16)
-    c.drawString(100, height - 50, "Quotation")
+    c.drawString(100, height - 50, "Scalesia Lodge Quote Calculator - Quotation")
 
     y_position = height - 100
 
@@ -251,7 +157,7 @@ def generar_pdf(day_services_df_list, hotel_cost_df, total_df, num_people, num_n
         y_position -= 10  # Espacio adicional entre días
 
     # Agregar el costo del hotel
-    c.drawString(100, y_position, "Hotel Cost:")
+    c.drawString(100, y_position, "Isabela Hotel Cost:")
     y_position -= 20
     c.drawString(100, y_position, f"- {hotel_cost_df.iloc[0]['Description']}, cost per person and night: ${hotel_cost_df.iloc[0]['Cost per person']} (Total Cost: ${hotel_cost_df.iloc[0]['Group Cost']})")
     y_position -= 30
