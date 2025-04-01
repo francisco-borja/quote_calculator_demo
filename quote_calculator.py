@@ -563,7 +563,7 @@ cost_data_persona_grupo = load_data_from_google_sheets(sheet_url, sheet_name_cos
 
 #st.image(logo, use_column_width=False, width=300)  # Ajusta el ancho según tus preferencias
 # Título de la aplicación
-st.markdown("<div class='title'>Scalesia Lodge Quote Calculator</div>", unsafe_allow_html=True)
+st.markdown("<div class='title'>Quote Calculator</div>", unsafe_allow_html=True)
 
 # Ingreso de la cantidad de personas
 num_people = st.number_input("Number of Pax", min_value=1, value=1)
@@ -581,10 +581,10 @@ if start_date and end_date:
         st.write(f"Total Number of nights: {num_nights}")
 
 # Nuevos inputs: Número de noches y costo por noche hotel Isabela
-num_nights_isabela = st.number_input("Number of nights at Isabela Hotel", min_value=0, value=0, step=1)
-cost_per_night_isabela = st.number_input("Cost per night and person at Isabela Hotel (USD)", min_value=0.0, value=0.0, step=0.01)
+num_nights_isabela = st.number_input("Number of nights at Hotel", min_value=0, value=0, step=1)
+cost_per_night_isabela = st.number_input("Cost per night and person at Hotel (USD)", min_value=0.0, value=0.0, step=0.01)
 
-
+"""
 # Input: Casilla para incluir o excluir servicios de la Isla Santa Cruz
 include_santa_cruz = st.checkbox("Includes Santa Cruz Island")
 
@@ -592,8 +592,9 @@ include_santa_cruz = st.checkbox("Includes Santa Cruz Island")
 if include_santa_cruz:
     filtered_lista_seleccionables = lista_seleccionables
 else:
-    filtered_lista_seleccionables = lista_seleccionables[lista_seleccionables['Categoría/Isla'] != 'SANTA CRUZ']
-
+    filtered_lista_seleccionables = lista_seleccionables[lista_seleccionables['Categoría/Isla'] != 'SANTA CRUZ']= lista_seleccionables[lista_seleccionables['Categoría/Isla'] != 'SANTA CRUZ']
+"""
+filtered_lista_seleccionables=lista_seleccionables[lista_seleccionables['Categoría/Isla'] != 'SANTA CRUZ']= lista_seleccionables[lista_seleccionables['Categoría/Isla'] != 'SANTA CRUZ']
 # Filtrar por 'Que aparezca como seleccionable (Lista Seleccionable)'
 filtered_lista_seleccionables = filtered_lista_seleccionables[filtered_lista_seleccionables['Que aparezca como seleccionable (Lista Seleccionable)'] == "TRUE"]
 
