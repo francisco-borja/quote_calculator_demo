@@ -584,16 +584,16 @@ if start_date and end_date:
 num_nights_isabela = st.number_input("Number of nights at Hotel", min_value=0, value=0, step=1)
 cost_per_night_isabela = st.number_input("Cost per night and person at Hotel (USD)", min_value=0.0, value=0.0, step=0.01)
 
-"""
+
 # Input: Casilla para incluir o excluir servicios de la Isla Santa Cruz
-include_santa_cruz = st.checkbox("Includes Santa Cruz Island")
+#include_santa_cruz = st.checkbox("Includes Santa Cruz Island")
 
 # Filtrar la lista_seleccionables según el checkbox
-if include_santa_cruz:
-    filtered_lista_seleccionables = lista_seleccionables
-else:
-    filtered_lista_seleccionables = lista_seleccionables[lista_seleccionables['Categoría/Isla'] != 'SANTA CRUZ']= lista_seleccionables[lista_seleccionables['Categoría/Isla'] != 'SANTA CRUZ']
-"""
+#if include_santa_cruz:
+ #   filtered_lista_seleccionables = lista_seleccionables
+#else:
+   # filtered_lista_seleccionables = lista_seleccionables[lista_seleccionables['Categoría/Isla'] != 'SANTA CRUZ']= lista_seleccionables[lista_seleccionables['Categoría/Isla'] != 'SANTA CRUZ']
+
 filtered_lista_seleccionables=lista_seleccionables[lista_seleccionables['Categoría/Isla'] != 'SANTA CRUZ']= lista_seleccionables[lista_seleccionables['Categoría/Isla'] != 'SANTA CRUZ']
 # Filtrar por 'Que aparezca como seleccionable (Lista Seleccionable)'
 filtered_lista_seleccionables = filtered_lista_seleccionables[filtered_lista_seleccionables['Que aparezca como seleccionable (Lista Seleccionable)'] == "TRUE"]
