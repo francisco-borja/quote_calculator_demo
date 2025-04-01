@@ -132,16 +132,20 @@ st.markdown(
 @st.cache_data(show_spinner=True)
 def load_data_from_google_sheets(sheet_url, sheet_name):
     try:
-        creds = service_account.Credentials.from_service_account_info(st.secrets["gcp_service_account"])
+        scopes = [
+            "https://www.googleapis.com/auth/spreadsheets.readonly",
+            "https://www.googleapis.com/auth/drive.readonly"
+        ]
+        creds = service_account.Credentials.from_service_account_info(
+            st.secrets["gcp_service_account"]
+        ).with_scopes(scopes)
         client = gspread.authorize(creds)
         sheet = client.open_by_url(sheet_url).worksheet(sheet_name)
         data = pd.DataFrame(sheet.get_all_records())
         return data
     except Exception as e:
         st.error(f"Error loading data from Google Sheets: {e}")
-        return pd.DataFrame()  # Retornar un DataFrame vacío en caso de error
-
-    
+        return pd.DataFrame()
 
 ## Función genérica para calcular costos con servicios detallados
 
