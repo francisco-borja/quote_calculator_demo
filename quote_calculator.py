@@ -208,9 +208,9 @@ def calcular_costo_avianca_rt_uio_gye_baltra(num_people, df_costos):
     servicio = "Avianca RT UIO o GYE / Baltra"
     return calcular_costo(servicio, num_people, df_costos)
 
-# Función específica para calcular el costo de "Charter Speedboat OW Pto. Ayora / Pto. Villamil"
-def calcular_costo_speedboat_ow(num_people, df_costos):
-    servicio = "Charter Speedboat OW Pto. Ayora / Pto. Villamil"
+# Función específica para calcular el costo de "Boat 1 One Way. Location 1 - Location 2"
+def calcular_costo_boat1_ow(num_people, df_costos):
+    servicio = "Boat 1 One Way. Location 1 - Location 2"
     return calcular_costo(servicio, num_people, df_costos)
 
 # Función específica para calcular el costo de "Charter Speedboat RT Pto. Ayora / Pto. Villamil"
@@ -738,7 +738,7 @@ if start_date and end_date:
                    ]
             
                 servicios_water_transport = [
-                       "Charter Speedboat OW Pto. Ayora / Pto. Villamil",
+                       "Boat 1 One Way. Location 1 - Location 2",
                        "Charter Speedboat RT  Pto. Ayora / Pto. Villamil",
                        "Ferry Pto Ayora - Pto. Villamil OW",
                        "Ferry Pto Ayora - Pto. Villamil RT"
@@ -895,8 +895,8 @@ if start_date and end_date:
                 if valid_selection:
                     if selected_water_transportation[i]:
                         for servicio in selected_water_transportation[i]:
-                            if servicio == "Charter Speedboat OW Pto. Ayora / Pto. Villamil":
-                                costo, tipo_costo, valor_original = calcular_costo_speedboat_ow(num_people, cost_data_persona_grupo)
+                            if servicio == "Boat 1 One Way. Location 1 - Location 2":
+                                costo, tipo_costo, valor_original = calcular_costo_boat1_ow(num_people, cost_data_persona_grupo)
                             elif servicio == "Charter Speedboat RT  Pto. Ayora / Pto. Villamil":
                                 costo, tipo_costo, valor_original = calcular_costo_speedboat_rt(num_people, cost_data_persona_grupo)
                             elif servicio == "Charter Water taxi - Itabaca Channel Small":
