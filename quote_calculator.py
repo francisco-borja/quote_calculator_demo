@@ -214,13 +214,13 @@ def calcular_costo_boat1_ow(num_people, df_costos):
     return calcular_costo(servicio, num_people, df_costos)
 
 # Función específica para calcular el costo de "Charter Speedboat RT Pto. Ayora / Pto. Villamil"
-def calcular_costo_speedboat_rt(num_people, df_costos):
-    servicio = "Charter Speedboat RT  Pto. Ayora / Pto. Villamil"
+def calcular_costo_boat1_rt(num_people, df_costos):
+    servicio = "Boat 1 Round Trip. Location 1 - Location 2"
     return calcular_costo(servicio, num_people, df_costos)
 
-# Función específica para calcular el costo de "Charter Water taxi Isabela OW"
-def calcular_costo_charter_water_taxi_isabela(num_people, df_costos):
-    servicio = "Charter Water taxi Isabela OW"
+# Función específica para calcular el costo de "Mini Boat Location 2"
+def calcular_costo_mini_boat_location2(num_people, df_costos):
+    servicio = "Mini Boat Location 2"
     return calcular_costo(servicio, num_people, df_costos)
 # Función específica para calcular el costo de "Charter Water Taxi - Itabaca Channel Small"
 def calcular_costo_water_taxi_small(num_people, df_costos):
@@ -739,7 +739,7 @@ if start_date and end_date:
             
                 servicios_water_transport = [
                        "Boat 1 One Way. Location 1 - Location 2",
-                       "Charter Speedboat RT  Pto. Ayora / Pto. Villamil",
+                       "Boat 1 Round Trip. Location 1 - Location 2",
                        "Ferry Pto Ayora - Pto. Villamil OW",
                        "Ferry Pto Ayora - Pto. Villamil RT"
                    ]      
@@ -897,8 +897,8 @@ if start_date and end_date:
                         for servicio in selected_water_transportation[i]:
                             if servicio == "Boat 1 One Way. Location 1 - Location 2":
                                 costo, tipo_costo, valor_original = calcular_costo_boat1_ow(num_people, cost_data_persona_grupo)
-                            elif servicio == "Charter Speedboat RT  Pto. Ayora / Pto. Villamil":
-                                costo, tipo_costo, valor_original = calcular_costo_speedboat_rt(num_people, cost_data_persona_grupo)
+                            elif servicio == "Boat 1 Round Trip. Location 1 - Location 2":
+                                costo, tipo_costo, valor_original = calcular_costo_boat1_rt(num_people, cost_data_persona_grupo)
                             elif servicio == "Charter Water taxi - Itabaca Channel Small":
                                 costo, tipo_costo, valor_original = calcular_costo_water_taxi_small(num_people, cost_data_persona_grupo)
                             elif servicio == "Charter Water taxi - Itabaca Channel Big":
@@ -907,8 +907,8 @@ if start_date and end_date:
                                 costo, tipo_costo, valor_original = calcular_costo_ferry_ow(num_people, cost_data_persona_grupo)
                             elif servicio == "Ferry Pto Ayora - Pto. Villamil RT":
                                 costo, tipo_costo, valor_original = calcular_costo_ferry_rt(num_people, cost_data_persona_grupo)
-                            elif servicio == "Charter Water taxi Isabela OW":
-                                costo, tipo_costo, valor_original = calcular_costo_charter_water_taxi_isabela(num_people, cost_data_persona_grupo)
+                            elif servicio == "Mini Boat Location 2":
+                                costo, tipo_costo, valor_original = calcular_costo_mini_boat_location2(num_people, cost_data_persona_grupo)
                             else:
                                 costo = 0
                                 tipo_costo = "N/A"
