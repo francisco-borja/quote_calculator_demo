@@ -231,16 +231,16 @@ def calcular_costo_water_taxi_small(num_people, df_costos):
 def calcular_costo_water_taxi_big(num_people, df_costos):
     servicio = "Charter Water taxi - Itabaca Channel Big"
     return calcular_costo(servicio, num_people, df_costos)
-# Función específica para calcular el costo de "Ferry Pto Ayora - Pto. Villamil OW"
+# Función específica para calcular el costo de "Ferry Location 1 - Location 2 One Way"
 def calcular_costo_ferry_ow(num_people, df_costos):
-    servicio = "Ferry Pto Ayora - Pto. Villamil OW"
+    servicio = "Ferry Location 1 - Location 2 One Way"
     return calcular_costo(servicio, num_people, df_costos)
 def calcular_costo_ferry_rt(num_people, df_costos):
-    servicio = "Ferry Pto Ayora - Pto. Villamil RT"
+    servicio = "Ferry Location 1 - Location 2 Round Trip"
     return calcular_costo(servicio, num_people, df_costos)
-# Función para Transfer-in Isabela
+# Función para Transfer-in Hotel
 def calcular_costo_transfer_in_isabela(num_people, df_costos):
-    servicio = "Transfer-in Isabela"
+    servicio = "Transfer-in Hotel"
     return calcular_costo(servicio, num_people, df_costos)
 
 # Función para Transfer-in Starting in Santa Cruz
@@ -248,28 +248,28 @@ def calcular_costo_transfer_in_santa_cruz(num_people, df_costos):
     servicio = "Transfer-in Starting in Santa Cruz"
     return calcular_costo(servicio, num_people, df_costos)
 
-# Función para Transfer-out Isabela
+# Función para Transfer-out Hotel
 def calcular_costo_transfer_out_isabela(num_people, df_costos):
-    servicio = "Transfer-out Isabela"
+    servicio = "Transfer-out Hotel"
     return calcular_costo(servicio, num_people, df_costos)
 
 # Función para Transfer-out Santa Cruz
 def calcular_costo_transfer_out_santa_cruz(num_people, df_costos):
     servicio = "Transfer-out Santa Cruz"
     return calcular_costo(servicio, num_people, df_costos)
-# Función para Tintoreras Walk & Snorkel Tour
+# Función para Walking Tour
 def calcular_costo_tintoreras_walk_snorkel(num_people, df_costos):
-    servicio = "Tintoreras Walk & Snorkel Tour"
+    servicio = "Walking Tour"
     return calcular_costo(servicio, num_people, df_costos)
 
-# Función para Private Tintoreras Walk & Snorkel Tour Charter
+# Función para Walking Tour- Private
 def calcular_costo_private_tintoreras_walk_snorkel(num_people, df_costos):
-    servicio = "Private Tintoreras Walk & Snorkel Tour Charter"
+    servicio = "Walking Tour- Private"
     return calcular_costo(servicio, num_people, df_costos)
 
-# Función para Private Tintoreras Walk & Snorkel Tour Charter
+# Función para Walking Tour- Private
 def calcular_costo_private_tuneles_walk_snorkel(num_people, df_costos):
-    servicio = "Private Túneles Walk & Snorkel Tour Charter"
+    servicio = "Walking Tour Second Location-Private"
     return calcular_costo(servicio, num_people, df_costos)
 
 # Función para Túneles Walk & Snorkel Tour
@@ -740,8 +740,8 @@ if start_date and end_date:
                 servicios_water_transport = [
                        "Boat 1 One Way. Location 1 - Location 2",
                        "Boat 1 Round Trip. Location 1 - Location 2",
-                       "Ferry Pto Ayora - Pto. Villamil OW",
-                       "Ferry Pto Ayora - Pto. Villamil RT"
+                       "Ferry Location 1 - Location 2 One Way",
+                       "Ferry Location 1 - Location 2 Round Trip"
                    ]      
                 excluded_services = [
                     'Angermeyer Standard DBL with breakfast', 
@@ -903,9 +903,9 @@ if start_date and end_date:
                                 costo, tipo_costo, valor_original = calcular_costo_water_taxi_small(num_people, cost_data_persona_grupo)
                             elif servicio == "Charter Water taxi - Itabaca Channel Big":
                                 costo, tipo_costo, valor_original = calcular_costo_water_taxi_big(num_people, cost_data_persona_grupo)
-                            elif servicio == "Ferry Pto Ayora - Pto. Villamil OW":
+                            elif servicio == "Ferry Location 1 - Location 2 One Way":
                                 costo, tipo_costo, valor_original = calcular_costo_ferry_ow(num_people, cost_data_persona_grupo)
-                            elif servicio == "Ferry Pto Ayora - Pto. Villamil RT":
+                            elif servicio == "Ferry Location 1 - Location 2 Round Trip":
                                 costo, tipo_costo, valor_original = calcular_costo_ferry_rt(num_people, cost_data_persona_grupo)
                             elif servicio == "Mini Boat Location 2":
                                 costo, tipo_costo, valor_original = calcular_costo_mini_boat_location2(num_people, cost_data_persona_grupo)
@@ -924,11 +924,11 @@ if start_date and end_date:
                 
                     if selected_ground_transportation[i]:
                         for servicio in selected_ground_transportation[i]:
-                            if servicio == "Transfer-in Isabela":
+                            if servicio == "Transfer-in Hotel":
                                 costo, tipo_costo, valor_original = calcular_costo_transfer_in_isabela(num_people, cost_data_persona_grupo)
                             elif servicio == "Transfer-in Starting in Santa Cruz":
                                 costo, tipo_costo, valor_original = calcular_costo_transfer_in_santa_cruz(num_people, cost_data_persona_grupo)
-                            elif servicio == "Transfer-out Isabela":
+                            elif servicio == "Transfer-out Hotel":
                                 costo, tipo_costo, valor_original = calcular_costo_transfer_out_isabela(num_people, cost_data_persona_grupo)
                             elif servicio == "Transfer-out Santa Cruz":
                                 costo, tipo_costo, valor_original = calcular_costo_transfer_out_santa_cruz(num_people, cost_data_persona_grupo)
@@ -976,11 +976,11 @@ if start_date and end_date:
                 
                     if selected_tours[i]:
                         for servicio in selected_tours[i]:
-                            if servicio == "Tintoreras Walk & Snorkel Tour":
+                            if servicio == "Walking Tour":
                                 costo, tipo_costo, valor_original = calcular_costo_tintoreras_walk_snorkel(num_people, cost_data_persona_grupo)
-                            elif servicio == "Private Tintoreras Walk & Snorkel Tour Charter":
+                            elif servicio == "Walking Tour- Private":
                                 costo, tipo_costo, valor_original = calcular_costo_private_tintoreras_walk_snorkel(num_people, cost_data_persona_grupo)
-                            elif servicio == "Private Túneles Walk & Snorkel Tour Charter":
+                            elif servicio == "Walking Tour Second Location-Private":
                                 costo, tipo_costo, valor_original = calcular_costo_private_tuneles_walk_snorkel(num_people, cost_data_persona_grupo)
                             elif servicio == "Túneles Walk & Snorkel Tour":
                                 costo, tipo_costo, valor_original = calcular_costo_tuneles_walk_snorkel(num_people, cost_data_persona_grupo)
