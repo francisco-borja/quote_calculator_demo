@@ -20,7 +20,7 @@ from io import BytesIO
 #Cargar la imagen del logo
 
 # Cargar la imagen del logo
-logo_path = "Quote Calculator Demo.jpg"
+logo_path = "Logo Francisco Borja.jpg"
 
 logo = Image.open(logo_path)
 
