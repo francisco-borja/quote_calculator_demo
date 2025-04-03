@@ -650,7 +650,7 @@ if start_date and end_date:
         # Listas para almacenar las selecciones por cada día
         selected_water_transportation = []
         selected_ground_transportation = []
-        selected_tickets = []
+        #selected_tickets = []
         selected_tours = []
         selected_guide = []
         selected_airport_assistance = []
@@ -784,6 +784,7 @@ if start_date and end_date:
                     "Guide Santa Cruz dinner",
                     "Guide Transfer in/out (Isabela / Santa Cruz)"
                 ]
+                """
                 # Verificar si se ha seleccionado más de un servicio de la lista "servicios_emetebe" en el mismo día
                 selected_emetebe_services = [s for s in selected_tickets[i] if s in servicios_emetebe]
                 if len(selected_emetebe_services) > 1:
@@ -802,12 +803,12 @@ if start_date and end_date:
                     if "Avianca OW UIO / Baltra" in selected_tickets[i] or "Avianca OW GYE / Baltra" in selected_tickets[i]:
                         st.error(f"Error: 'Avianca OW UIO / Baltra' or 'Avianca OW GYE / Baltra' can only be selected on the first or last day. Day {i+1}")
                         valid_selection = False  # Marcar selección como inválida
-        
+                       
                 # Validación para "Avianca RT UIO o GYE / Baltra" (solo primer día)
                 if i != 0 and "Avianca RT UIO o GYE / Baltra" in selected_tickets[i]:
                     st.error(f"Error: 'Avianca RT UIO o GYE / Baltra' can only be selected on the first day. Day {i+1}")
                     valid_selection = False  # Marcar selección como inválida
-                    
+                    """
                   # Verificar si se ha seleccionado más de un servicio de la lista "servicios_water_transport" en el mismo día
                 selected_water_transport_services = [s for s in selected_water_transportation[i] if s in servicios_water_transport]
                 if len(selected_water_transport_services) > 1:
@@ -958,7 +959,7 @@ if start_date and end_date:
                                # "Original Cost (before calculation)": valor_original,
                                 "Final Cost": costo
                             })
-                
+                            """
                     if selected_tickets[i]:
                         for servicio in selected_tickets[i]:
                             if servicio == "Emetebe OW Baltra / Isabela":
@@ -987,7 +988,7 @@ if start_date and end_date:
                                 #"Original Cost (before calculation)": valor_original,
                                 "Final Cost": costo
                             })
-                
+                                """
                     if selected_tours[i]:
                         for servicio in selected_tours[i]:
                             if servicio == "Walking Tour":
