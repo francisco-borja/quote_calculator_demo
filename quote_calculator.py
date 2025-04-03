@@ -36,30 +36,93 @@ st.set_page_config(page_title="Touristic Services Quote Calculator", layout="cen
 st.markdown(
     f"""
     <style>
+    /* Colores */
+    .dark-green-bg {{
+        background-color: rgba(43, 76, 140, 0.9); /* Azul oscuro 90% */
+        color: white;
+    }}
+    .dark-green-bg-light {{
+        background-color: rgba(43, 76, 140, 0.4); /* Azul oscuro 40% */
+    }}
+    .light-green-bg {{
+        background-color: rgba(43, 76, 140, 0.7); /* Azul oscuro 70% */
+    }}
+    .light-green-bg-lighter {{
+        background-color: rgba(43, 76, 140, 0.5); /* Azul oscuro 50% */
+    }}
+    .celeste-bg {{
+        background-color: #64a6cc; /* Azul claro 100% */
+    }}
     
-    
+    /* Botón de cotización */
+    .stButton > button {{
+        background-color: rgba(43, 76, 140, 0.7); /* Azul claro para botón */
+        color: white;
+        border-radius: 5px;
+        border: 2px solid #64a6cc; /* Detalle azul claro */
+    }}
+    .stButton > button:hover {{
+        background-color: rgba(43, 76, 140, 0.5); /* Azul claro 50% en hover */
+        border: 2px solid #2b4c8c; /* Azul oscuro en hover */
+    }}
+
+    /* Título en azul oscuro */
+    .title {{
+        font-size: 2.5em;
+        color: rgba(43, 76, 140, 0.9); /* Azul oscuro */
+        text-align: center;
+        margin-bottom: 20px;
+    }}
+
+    /* Contenedor principal */
+    .main-container {{
+        padding: 10px;
+        background-color: rgba(43, 76, 140, 0.4); /* Azul oscuro 40% */
+        border-radius: 10px;
+        border: 3px solid #64a6cc; /* Detalle azul claro */
+    }}
+
+    /* Textos y selectores */
+    .stTextInput label, .stSelectbox label {{
+        color: rgba(43, 76, 140, 0.9); /* Azul oscuro */
+        font-weight: bold;
+    }}
+
+    /* Bordes de tablas y inputs */
+    .stDataFrame, .stMultiselect {{
+        border: 2px solid rgba(43, 76, 140, 0.9); /* Bordes en azul oscuro */
+    }}
 
     /* Imagen centrada y tamaño ajustado */
     .logo {{
         display: block;
         margin-left: auto;
         margin-right: auto;
-        width: 40%; /* Ajusta el tamaño de la imagen, puedes modificar este valor para hacerla más grande o más pequeña */
+        width: 40%; /* Ajusta el tamaño de la imagen */
     }}
-    
-       
-    
+
+    /* Color personalizado para los selectores de servicios */
+    [data-baseweb="select"] {{
+        background-color: #2b4c8c; /* Azul fuerte */
+        color: white;
+    }}
+    [data-baseweb="select"]::placeholder {{
+        color: white;
+    }}
+    .stSelectbox > div > div {{
+        color: white;
+    }}
     </style>
 
     <!-- Mostrar el logo centrado -->
     <div>
         <img src="data:image/jpg;base64,{logo_base64}" class="logo">
     </div>
-    
-    
     """,
     unsafe_allow_html=True
 )
+
+
 
 
 # Función para manejar excepciones y conectar a Google Sheets
