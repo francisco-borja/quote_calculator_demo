@@ -784,31 +784,8 @@ if start_date and end_date:
                     "Guide Santa Cruz dinner",
                     "Guide Transfer in/out (Isabela / Santa Cruz)"
                 ]
-                """
-                # Verificar si se ha seleccionado más de un servicio de la lista "servicios_emetebe" en el mismo día
-                selected_emetebe_services = [s for s in selected_tickets[i] if s in servicios_emetebe]
-                if len(selected_emetebe_services) > 1:
-                    st.error(f"Error: You cannot select more than one Emetebe service on the same day. Day {i+1}")
-                    valid_selection = False  # Marcar selección como inválida
-               
-                # Verificar si se ha seleccionado más de un servicio de Avianca en el mismo día
                 
-                selected_avianca_services = [s for s in selected_tickets[i] if s in servicios_avianca]
-                if len(selected_avianca_services) > 1:
-                    st.error(f"Error: You cannot select more than one Avianca service on the same day. Day {i+1}")
-                    valid_selection = False  # Marcar selección como inválida
-
-                # Validación para "Avianca OW UIO / Baltra" y "Avianca OW GYE / Baltra" (solo primer o último día)
-                if i not in [0, num_nights - 1]:
-                    if "Avianca OW UIO / Baltra" in selected_tickets[i] or "Avianca OW GYE / Baltra" in selected_tickets[i]:
-                        st.error(f"Error: 'Avianca OW UIO / Baltra' or 'Avianca OW GYE / Baltra' can only be selected on the first or last day. Day {i+1}")
-                        valid_selection = False  # Marcar selección como inválida
-                       
-                # Validación para "Avianca RT UIO o GYE / Baltra" (solo primer día)
-                if i != 0 and "Avianca RT UIO o GYE / Baltra" in selected_tickets[i]:
-                    st.error(f"Error: 'Avianca RT UIO o GYE / Baltra' can only be selected on the first day. Day {i+1}")
-                    valid_selection = False  # Marcar selección como inválida
-                    """
+              
                   # Verificar si se ha seleccionado más de un servicio de la lista "servicios_water_transport" en el mismo día
                 selected_water_transport_services = [s for s in selected_water_transportation[i] if s in servicios_water_transport]
                 if len(selected_water_transport_services) > 1:
@@ -936,36 +913,7 @@ if start_date and end_date:
                                # "Original Cost (before calculation)": valor_original,
                                 "Final Cost": costo
                             })
-                            """
-                    if selected_tickets[i]:
-                        for servicio in selected_tickets[i]:
-                            if servicio == "Emetebe OW Baltra / Isabela":
-                                costo, tipo_costo, valor_original = calcular_costo_emetebe(num_people, cost_data_persona_grupo)
-                            elif servicio == "Emetebe RT Baltra / Isabela":
-                                costo, tipo_costo, valor_original = calcular_costo_emetebe_rt(num_people, cost_data_persona_grupo)
-                            elif servicio == "Charter Emetebe OW Baltra / Isabela":
-                                costo, tipo_costo, valor_original = calcular_costo_charter_emetebe(num_people, cost_data_persona_grupo)
-                            elif servicio == "Charter Emetebe RT Baltra / Isabela":
-                                costo, tipo_costo, valor_original = calcular_costo_charter_emetebe_rt(num_people, cost_data_persona_grupo)
-                            elif servicio == "Avianca OW UIO / Baltra":
-                                costo, tipo_costo, valor_original = calcular_costo_avianca_ow_uio_baltra(num_people, cost_data_persona_grupo)
-                            elif servicio == "Avianca OW GYE / Baltra":
-                                costo, tipo_costo, valor_original = calcular_costo_avianca_ow_gye_baltra(num_people, cost_data_persona_grupo)
-                            elif servicio == "Avianca RT UIO o GYE / Baltra":
-                                costo, tipo_costo, valor_original = calcular_costo_avianca_rt_uio_gye_baltra(num_people, cost_data_persona_grupo)
-                            else:
-                                costo = 0
-                                tipo_costo = "N/A"
-                                valor_original = 0
-                
-                            day_services.append({
-                                "Type": "Tickets",
-                                "Service": servicio,
-                                "Cost Type": tipo_costo,
-                                #"Original Cost (before calculation)": valor_original,
-                                "Final Cost": costo
-                            })
-                                """
+                           
                     if selected_tours[i]:
                         for servicio in selected_tours[i]:
                             if servicio == "Walking Tour":
@@ -1106,72 +1054,7 @@ if start_date and end_date:
                                 
                                 "Final Cost": costo
                             })
-                    """
-                    # Cálculo para Accommodations Santa Cruz
-                    if selected_accommodations[i]:
-                        for servicio in selected_accommodations[i]:
-                            if servicio == "Finch Bay Hotel 4D-3N DBL-TPL Program 2025":
-                                costo, tipo_costo, valor_original = calcular_costo_finch_bay_4d3n_dbl_tpl(num_people, cost_data_persona_grupo)
-                            elif servicio == "Finch Bay Hotel 4D/3N SGL Program 2025":
-                                costo, tipo_costo, valor_original = calcular_costo_finch_bay_4d3n_sgl(num_people, cost_data_persona_grupo)
-                            elif servicio == "Finch Bay Hotel 4D/3N Suite DBL Program 2025":
-                                costo, tipo_costo, valor_original = calcular_costo_finch_bay_4d3n_suite_dbl(num_people, cost_data_persona_grupo)
-                            elif servicio == "Finch Bay Hotel 4D/3N Suite SGL Program 2025":
-                                costo, tipo_costo, valor_original = calcular_costo_finch_bay_4d3n_suite_sgl(num_people, cost_data_persona_grupo)
-                            elif servicio == "Finch Bay Hotel 5D/4N DBL / TPL Program 2025":
-                                costo, tipo_costo, valor_original = calcular_costo_finch_bay_5d4n_dbl_tpl(num_people, cost_data_persona_grupo)
-                            elif servicio == "Finch Bay Hotel 5D/4N SGL Program 2025":
-                                costo, tipo_costo, valor_original = calcular_costo_finch_bay_5d4n_sgl(num_people, cost_data_persona_grupo)
-                            elif servicio == "Finch Bay Hotel 5D/4N Suite DBL Program 2025":
-                                costo, tipo_costo, valor_original = calcular_costo_finch_bay_5d4n_suite_dbl(num_people, cost_data_persona_grupo)
-                            elif servicio == "Finch Bay Hotel 5D/4N Suite SGL Program 2025":
-                                costo, tipo_costo, valor_original = calcular_costo_finch_bay_5d4n_suite_sgl(num_people, cost_data_persona_grupo)
-                            elif servicio == "Angermeyer Waterfront Inn 4D/3N DBL / TPL Program 2025":
-                                costo, tipo_costo, valor_original = calcular_costo_angermeyer_4d3n_dbl_tpl(num_people, cost_data_persona_grupo)
-                            elif servicio == "Angermeyer Waterfront Inn 4D/3N SGL Program 2025":
-                                costo, tipo_costo, valor_original = calcular_costo_angermeyer_4d3n_sgl(num_people, cost_data_persona_grupo)
-                            elif servicio == "Angermeyer Waterfront Inn 4D/3N Suite DBL Program 2025":
-                                costo, tipo_costo, valor_original = calcular_costo_angermeyer_4d3n_suite_dbl(num_people, cost_data_persona_grupo)
-                            elif servicio == "Angermeyer Waterfront Inn 4D/3N Suite SGL Program 2025":
-                                costo, tipo_costo, valor_original = calcular_costo_angermeyer_4d3n_suite_sgl(num_people, cost_data_persona_grupo)
-                            elif servicio == "Angermeyer Waterfront Inn 3D/2N DBL / TPL Program 2025":
-                                costo, tipo_costo, valor_original = calcular_costo_angermeyer_3d2n_dbl_tpl(num_people, cost_data_persona_grupo)
-                            elif servicio == "Angermeyer Waterfront Inn 3D/2N SGL Program 2025":
-                                costo, tipo_costo, valor_original = calcular_costo_angermeyer_3d2n_sgl(num_people, cost_data_persona_grupo)
-                            elif servicio == "Angermeyer Waterfront Inn 3D/2N Suite DBL Program 2025":
-                                costo, tipo_costo, valor_original = calcular_costo_angermeyer_3d2n_suite_dbl(num_people, cost_data_persona_grupo)
-                            elif servicio == "Angermeyer Waterfront Inn 3D/2N Suite SGL Program 2025":
-                                costo, tipo_costo, valor_original = calcular_costo_angermeyer_3d2n_suite_sgl(num_people, cost_data_persona_grupo)
-                            elif servicio == "Angermeyer Standard DBL with breakfast":
-                                costo, tipo_costo, valor_original = calcular_costo_angermeyer_standard_dbl_breakfast(num_people, cost_data_persona_grupo)
-                            elif servicio == "Angermeyer Standard SGL with breakfast":
-                                costo, tipo_costo, valor_original = calcular_costo_angermeyer_standard_sgl_breakfast(num_people, cost_data_persona_grupo)
-                            elif servicio == "Finch Bay Hotel Standard DBL with breakfast":
-                                costo, tipo_costo, valor_original = calcular_costo_finch_bay_standard_dbl_breakfast(num_people, cost_data_persona_grupo)
-                            elif servicio == "Finch Bay Hotel Standard SGL with breakfast":
-                                costo, tipo_costo, valor_original = calcular_costo_finch_bay_standard_sgl_breakfast(num_people, cost_data_persona_grupo)
-                            elif servicio == "Finch Bay Hotel Suite DBL with breakfast":
-                                costo, tipo_costo, valor_original = calcular_costo_finch_bay_suite_dbl_breakfast(num_people, cost_data_persona_grupo)
-                            elif servicio == "Finch Bay Hotel Suite SGL with breakfast":
-                                costo, tipo_costo, valor_original = calcular_costo_finch_bay_suite_sgl_breakfast(num_people, cost_data_persona_grupo)
-                            elif servicio == "Finch Bay Hotel Suite Additional adult with breakfast":
-                                costo, tipo_costo, valor_original = calcular_costo_finch_bay_suite_additional_adult(num_people, cost_data_persona_grupo)
-                            else:
-                                costo = 0
-                                tipo_costo = "N/A"
-                                valor_original = 0
                     
-                            day_services.append({
-                                "Type": "Accommodations in Santa Cruz",
-                                "Service": servicio,
-                                "Cost Type": tipo_costo,
-                               
-                                "Final Cost": costo
-                                
-                            })
-
-                """
-    
 
                     # Convertir a DataFrame para mostrar en la tabla
                     day_services_df = pd.DataFrame(day_services)
