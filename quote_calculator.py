@@ -813,43 +813,7 @@ if start_date and end_date:
                         else:
                             # Permitir múltiples selecciones de "Full-day Yatch Tour" en diferentes días
                             pass
-         #Para validación servicios acomodación Sta Cruz no permitir guias ni tours en Santa Cruz, excepto excludde services
-                 # Filtrar acomodaciones Santa Cruz excluyendo servicios específicos
-                #selected_accommodations_santa_cruz = [s for s in selected_accommodations[i]
-                      #  if s not in excluded_services and s in accommodations_santa_cruz
-                  #  ]
-                # Verificar si hay tours o guías seleccionados en el mismo día
-               # selected_tours_santa_cruz = [
-                #      s for s in selected_tours[i] if s in servicios_tours_santa_cruz
-                #  ]
-                #selected_guides_santa_cruz = [
-                 #     s for s in selected_guide[i] if s in servicios_guide_santa_cruz
-                #  ]
-            
-                  # Validación en el mismo día
-                #if selected_accommodations_santa_cruz and (selected_tours_santa_cruz or selected_guides_santa_cruz):
-                 #     st.error(f"Error: You cannot select accommodations in Santa Cruz along with tour or guide services in Santa Cruz on the same day. Day {i+1}")
-                  #    valid_selection = False  
-                
-                # Si hay un servicio de alojamiento en Santa Cruz (excepto los excluidos)
-               # if selected_accommodations_santa_cruz:
-                     # Validar si hay servicios de guía o tours en Santa Cruz en otro día
-                  #   for j in range(num_nights):
-                   #      if j != i:  # Verificar otros días
-                             # Revisar si hay tours o guías seleccionados en días diferentes
-                    #         selected_tours_santa_cruz = [
-                     #            s for s in selected_tours[j] if s in servicios_tours_santa_cruz
-                      #       ]
-                       #      selected_guides_santa_cruz = [
-                        #         s for s in selected_guide[j] if s in servicios_guide_santa_cruz
-                         #    ]
-                             
-                          #   if selected_tours_santa_cruz or selected_guides_santa_cruz:
-                           #      st.error(f"Error: Tour or guide services in Santa Cruz cannot be selected on different days when accommodations in Santa Cruz are booked. Day {j+1}")
-                            #     valid_selection = False    
-                 
-                                 
-                
+       
                                
             
               
