@@ -29,7 +29,7 @@ with open(logo_path, "rb") as img_file:
     logo_base64 = base64.b64encode(img_file.read()).decode()
 
 # Configuración de la página
-st.set_page_config(page_title="Quote Calculator", layout="centered",
+st.set_page_config(page_title="Touristic Services Quote Calculator", layout="centered",
                    
     )
 
@@ -680,14 +680,8 @@ if start_date and end_date:
             )
             selected_ground_transportation.append(ground_transport)
             
-            # Selector de tickets_2024
-            tickets = st.multiselect(
-                f"Tickets for day {i+1}", 
-                tickets_2024,
-                key=f"tickets_{i}",
-                help="Select tickets",
-            )
-            selected_tickets.append(tickets)
+            
+            #selected_tickets.append(tickets)
             
             # Selector de tours
             tour = st.multiselect(
@@ -725,14 +719,7 @@ if start_date and end_date:
             )
             selected_meals.append(meal)
             
-            # Selector de accommodations_santa_cruz
-            accommodation = st.multiselect(
-                f"Accommodations in Santa Cruz for day {i+1}", 
-                accommodations_santa_cruz,
-                key=f"accommodation_{i}",
-                help="Select accommodations in Santa Cruz",
-            )
-            selected_accommodations.append(accommodation)
+            
   
  
         # Botón para calcular cotización
@@ -1234,7 +1221,7 @@ if start_date and end_date:
                 # Calcular el costo del hotel Isabela
               total_cost_isabela = num_nights_isabela * cost_per_night_isabela* num_people
               # Mostrar el resultado en una nueva tabla
-              st.write("### Cost of Isabela Hotel Nights")
+              st.write("### Cost of Hotel Nights")
               st.table(pd.DataFrame({"Description": [f"{num_nights_isabela} night(s), {num_people} pax"], 
                                      "Group Cost": [total_cost_isabela], "Cost per person":[total_cost_isabela/num_people]}))
               # Sumar el costo del hotel Isabela al valor total de la cotización
