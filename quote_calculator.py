@@ -671,8 +671,8 @@ if start_date and end_date:
         st.write(f"Total Number of nights: {num_nights}")
 
 # Nuevos inputs: Número de noches y costo por noche hotel Isabela
-num_nights_isabela = st.number_input("Number of nights at Hotel", min_value=0, value=0, step=1)
-cost_per_night_isabela = st.number_input("Cost per night and person at Hotel (USD)", min_value=0.0, value=0.0, step=0.01)
+#num_nights_isabela = st.number_input("Number of nights at Hotel", min_value=0, value=0, step=1)
+#cost_per_night_isabela = st.number_input("Cost per night and person at Hotel (USD)", min_value=0.0, value=0.0, step=0.01)
 
 
 # Input: Casilla para incluir o excluir servicios de la Isla Santa Cruz
@@ -1107,13 +1107,13 @@ if start_date and end_date:
 
             if valid_selection:
                 # Calcular el costo del hotel Isabela
-              total_cost_isabela = num_nights_isabela * cost_per_night_isabela* num_people
+            #  total_cost_isabela = num_nights_isabela * cost_per_night_isabela* num_people
               # Mostrar el resultado en una nueva tabla
               st.write("### Cost of Hotel Nights")
-              st.table(pd.DataFrame({"Description": [f"{num_nights_isabela} night(s), {num_people} pax"], 
-                                     "Group Cost": [total_cost_isabela], "Cost per person":[total_cost_isabela/num_people]}))
+             # st.table(pd.DataFrame({"Description": [f"{num_nights_isabela} night(s), {num_people} pax"], 
+              #                       "Group Cost": [total_cost_isabela], "Cost per person":[total_cost_isabela/num_people]}))
               # Sumar el costo del hotel Isabela al valor total de la cotización
-              total_quotation_value += total_cost_isabela
+              total_quotation_value #+= total_cost_isabela
                 # Tabla con el total final de la cotización
                 
               st.write("### Total Quotation Value:")
@@ -1123,15 +1123,15 @@ if start_date and end_date:
               
              # Guardar los datos del hotel y el total para incluir en el PDF
                 
-              hotel_cost_df = pd.DataFrame({
-                    "Description": [f"{num_nights_isabela} night(s), {num_people} pax"],
-                    "Group Cost": [total_cost_isabela],
-                    "Cost per person": [cost_per_night_isabela]
-                })
+          #    hotel_cost_df = pd.DataFrame({
+           #         "Description": [f"{num_nights_isabela} night(s), {num_people} pax"],
+            #        "Group Cost": [total_cost_isabela],
+             #       "Cost per person": [cost_per_night_isabela]
+              #  })
 
                
                         
-              pdf_buffer = generar_pdf(day_services_df_list, hotel_cost_df, total_df, num_people, num_nights)
+              pdf_buffer = generar_pdf(day_services_df_list, total_df, num_people, num_nights)
                 
 # Mostrar el botón para descargar el PDF solo si el PDF ya fue generado
               st.download_button(
