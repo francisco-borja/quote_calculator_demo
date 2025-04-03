@@ -1106,7 +1106,7 @@ if start_date and end_date:
                                 
                                 "Final Cost": costo
                             })
-                    
+                    """
                     # Cálculo para Accommodations Santa Cruz
                     if selected_accommodations[i]:
                         for servicio in selected_accommodations[i]:
@@ -1170,7 +1170,7 @@ if start_date and end_date:
                                 
                             })
 
-                
+                """
     
 
                     # Convertir a DataFrame para mostrar en la tabla
