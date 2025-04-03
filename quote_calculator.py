@@ -20,7 +20,7 @@ from io import BytesIO
 #Cargar la imagen del logo
 
 # Cargar la imagen del logo
-logo_path = "Logo JPG Blanco - Scalesia Lodge.jpg"
+logo_path = "Quote Calculator Demo.jpg"
 
 logo = Image.open(logo_path)
 
@@ -33,6 +33,33 @@ st.set_page_config(page_title="Quote Calculator", layout="centered",
                    
     )
 
+st.markdown(
+    f"""
+    <style>
+    
+    
+
+    /* Imagen centrada y tamaño ajustado */
+    .logo {{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 40%; /* Ajusta el tamaño de la imagen, puedes modificar este valor para hacerla más grande o más pequeña */
+    }}
+    
+       
+    
+    </style>
+
+    <!-- Mostrar el logo centrado -->
+    <div>
+        <img src="data:image/jpg;base64,{logo_base64}" class="logo">
+    </div>
+    
+    
+    """,
+    unsafe_allow_html=True
+)
 
 
 # Función para manejar excepciones y conectar a Google Sheets
