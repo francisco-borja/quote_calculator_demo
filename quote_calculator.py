@@ -218,7 +218,7 @@ def calcular_costo(servicio, num_people, df_costos):
 
 
 # Función para generar el PDF (modificada para incluir todos los días)
-def generar_pdf(day_services_df_list, hotel_cost_df, total_df, num_people, num_nights):
+def generar_pdf(day_services_df_list, total_df, num_people, num_nights):
     buffer = BytesIO()  # Crear un buffer en memoria para guardar el PDF
     c = canvas.Canvas(buffer, pagesize=letter)
     width, height = letter
@@ -247,10 +247,10 @@ def generar_pdf(day_services_df_list, hotel_cost_df, total_df, num_people, num_n
         y_position -= 10  # Espacio adicional entre días
 
     # Agregar el costo del hotel
-    c.drawString(100, y_position, "Hotel Cost:")
-    y_position -= 20
-    c.drawString(100, y_position, f"- {hotel_cost_df.iloc[0]['Description']}, cost per person and night: ${hotel_cost_df.iloc[0]['Cost per person']} (Total Cost: ${hotel_cost_df.iloc[0]['Group Cost']})")
-    y_position -= 30
+   # c.drawString(100, y_position, "Hotel Cost:")
+    #y_position -= 20
+    #c.drawString(100, y_position, f"- {hotel_cost_df.iloc[0]['Description']}, cost per person and night: ${hotel_cost_df.iloc[0]['Cost per person']} (Total Cost: ${hotel_cost_df.iloc[0]['Group Cost']})")
+    #y_position -= 30
 
     # Agregar el costo total
     c.drawString(100, y_position, "Total Quotation:")
