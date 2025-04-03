@@ -272,64 +272,64 @@ def calcular_costo_private_tuneles_walk_snorkel(num_people, df_costos):
     servicio = "Walking Tour Second Location-Private"
     return calcular_costo(servicio, num_people, df_costos)
 
-# Función para Túneles Walk & Snorkel Tour
+# Función para Walking Tour Second Location
 def calcular_costo_tuneles_walk_snorkel(num_people, df_costos):
-    servicio = "Túneles Walk & Snorkel Tour"
+    servicio = "Walking Tour Second Location"
     return calcular_costo(servicio, num_people, df_costos)
 
-# Función para Sierra Negra & Chico Volcanoes
+# Función para Trekking
 def calcular_costo_sierra_negra_chico_volcanoes(num_people, df_costos):
-    servicio = "Sierra Negra & Chico Volcanoes"
+    servicio = "Trekking"
     return calcular_costo(servicio, num_people, df_costos)
 
-# Función para Wall of Tears Trekking or biking Tour
+# Función para Trekking and Biking Tour
 def calcular_costo_wall_of_tears(num_people, df_costos):
-    servicio = "Wall of Tears Trekking or biking Tour"
+    servicio = "Trekking and Biking Tour"
     return calcular_costo(servicio, num_people, df_costos)
 
-# Función para Wetlands & Tortoise Breeding Station
+# Función para Animal Viewing Tour
 def calcular_costo_wetlands_tortoise_breeding_station(num_people, df_costos):
-    servicio = "Wetlands & Tortoise Breeding Station"
+    servicio = "Animal Viewing Tour"
     return calcular_costo(servicio, num_people, df_costos)
 
-# Función para Sucre's Cave, El Mango Viewpoint & Beach time
+# Función para Caves and Swimming Spot 1
 def calcular_costo_sucres_cave(num_people, df_costos):
-    servicio = "Sucre's Cave, El Mango Viewpoint & Beach time"
+    servicio = "Caves and Swimming Spot 1"
     return calcular_costo(servicio, num_people, df_costos)
 
-# Función para Concha de Perla Snorkel Tour + Beach Time
+# Función para Caves and Swimming Spot 2
 def calcular_costo_concha_de_perla(num_people, df_costos):
-    servicio = "Concha de Perla Snorkel Tour + Beach Time"
+    servicio = "Caves and Swimming Spot 2"
     return calcular_costo(servicio, num_people, df_costos)
 
-# Función para Kayaking in Tintoreras
+# Función para Kayaking
 def calcular_costo_kayaking_in_tintoreras(num_people, df_costos):
-    servicio = "Kayaking in Tintoreras"
+    servicio = "Kayaking"
     return calcular_costo(servicio, num_people, df_costos)
 
-# Función para Sulfur Mines Tour
+# Función para Springs Walk and Swimming Tour
 def calcular_costo_sulfur_mines(num_people, df_costos):
-    servicio = "Sulfur Mines Tour"
+    servicio = "Springs Walk and Swimming Tour"
     return calcular_costo(servicio, num_people, df_costos)
 
-# Función para Private Cuatro Hermanos Snorkeling & Fishing Tour + Tortuga Island
+# Función para Diving Tour - Private
 def calcular_costo_cuatro_hermanos(num_people, df_costos):
-    servicio = "Private Cuatro Hermanos Snorkeling & Fishing Tour + Tortuga Island"
+    servicio = "Diving Tour - Private"
     return calcular_costo(servicio, num_people, df_costos)
 
-# Función para Scuba Diving Isabela
+# Función para Fishing Tour
 def calcular_costo_scuba_diving_isabela(num_people, df_costos):
-    servicio = "Scuba Diving Isabela"
+    servicio = "Fishing Tour"
     return calcular_costo(servicio, num_people, df_costos)
 
-# Función para Surf Isabela-Half Day	
+# Función para Boat trip - Half day	
 def calcular_costo_surf_isabela_half_day(num_people, df_costos):
-    servicio = "Surf Isabela-Half Day"
+    servicio = "Boat trip - Half day"
     return calcular_costo(servicio, num_people, df_costos)
 
-# Función para Surf Isabela-Whole Day
+# Función para Boat trip - Whole day
 def calcular_costo_surf_isabela_whole_day(num_people, df_costos):
-    servicio = "Surf Isabela-Whole Day"
+    servicio = "Boat trip - Whole day"
     return calcular_costo(servicio, num_people, df_costos)
 
 # Función para Santa Cruz Highlands Tour
@@ -356,14 +356,14 @@ def calcular_costo_scuba_diving_finch_bay(num_people, df_costos):
 def calcular_costo_scuba_diving_santa_cruz(num_people, df_costos):
     servicio = "Scuba Diving Santa Cruz"
     return calcular_costo(servicio, num_people, df_costos)
-# Función para Guide Isabela in English
+# Función para Guide - English
 def calcular_costo_guide_isabela_english(num_people, df_costos):
-    servicio = "Guide Isabela in English"
+    servicio = "Guide - English"
     return calcular_costo(servicio, num_people, df_costos)
 
-# Función para Guide Isabela in German
+# Función para Guide - German
 def calcular_costo_guide_isabela_german(num_people, df_costos):
-    servicio = "Guide Isabela in German"
+    servicio = "Guide - German"
     return calcular_costo(servicio, num_people, df_costos)
 
 # Función para Guide Santa Cruz in English
@@ -396,9 +396,9 @@ def calcular_costo_guide_santa_cruz_dinner(num_people, df_costos):
 def calcular_costo_guide_transfer_in_out(num_people, df_costos):
     servicio = "Guide Transfer in/out (Isabela / Santa Cruz)"
     return calcular_costo(servicio, num_people, df_costos)
-# Función para Luggage transport Isabela
+# Función para Luggage Transport
 def calcular_costo_luggage_transport_isabela(num_people, df_costos):
-    servicio = "Luggage transport Isabela"
+    servicio = "Luggage Transport"
     return calcular_costo(servicio, num_people, df_costos)
 
 # Función para Bilingual airport assistant Santa Cruz
@@ -410,9 +410,9 @@ def calcular_costo_bilingual_assistant_santa_cruz(num_people, df_costos):
 def calcular_costo_luggage_transport_santa_cruz(num_people, df_costos):
     servicio = "Luggage transport Santa Cruz"
     return calcular_costo(servicio, num_people, df_costos)
-# Función para Lunch Pto. Villamil Isabela
+# Función para Lunch
 def calcular_costo_lunch_pto_villamil(num_people, df_costos):
-    servicio = "Lunch Pto. Villamil Isabela"
+    servicio = "Lunch"
     return calcular_costo(servicio, num_people, df_costos)
 
 # Función para Dinner Pto. Ayora Santa Cruz
@@ -541,7 +541,7 @@ def calcular_costo_finch_bay_suite_additional_adult(num_people, df_costos):
 
 # Función para Finch Bay Hotel Suite Additional adult with breakfast
 def calcular_costo_free_time_at_the_beach(num_people, df_costos):
-    servicio = "Free Time at the Beach - Isabela"
+    servicio = "River tour"
     return calcular_costo(servicio, num_people, df_costos)
 
 # Función para Finch Bay Hotel Suite Additional adult with breakfast
@@ -982,29 +982,29 @@ if start_date and end_date:
                                 costo, tipo_costo, valor_original = calcular_costo_private_tintoreras_walk_snorkel(num_people, cost_data_persona_grupo)
                             elif servicio == "Walking Tour Second Location-Private":
                                 costo, tipo_costo, valor_original = calcular_costo_private_tuneles_walk_snorkel(num_people, cost_data_persona_grupo)
-                            elif servicio == "Túneles Walk & Snorkel Tour":
+                            elif servicio == "Walking Tour Second Location":
                                 costo, tipo_costo, valor_original = calcular_costo_tuneles_walk_snorkel(num_people, cost_data_persona_grupo)
-                            elif servicio == "Sierra Negra & Chico Volcanoes":
+                            elif servicio == "Trekking":
                                 costo, tipo_costo, valor_original = calcular_costo_sierra_negra_chico_volcanoes(num_people, cost_data_persona_grupo)
-                            elif servicio == "Wall of Tears Trekking or biking Tour":
+                            elif servicio == "Trekking and Biking Tour":
                                 costo, tipo_costo, valor_original = calcular_costo_wall_of_tears(num_people, cost_data_persona_grupo)
-                            elif servicio == "Wetlands & Tortoise Breeding Station":
+                            elif servicio == "Animal Viewing Tour":
                                 costo, tipo_costo, valor_original = calcular_costo_wetlands_tortoise_breeding_station(num_people, cost_data_persona_grupo)
-                            elif servicio == "Sucre's Cave, El Mango Viewpoint & Beach time":
+                            elif servicio == "Caves and Swimming Spot 1":
                                 costo, tipo_costo, valor_original = calcular_costo_sucres_cave(num_people, cost_data_persona_grupo)
-                            elif servicio == "Concha de Perla Snorkel Tour + Beach Time":
+                            elif servicio == "Caves and Swimming Spot 2":
                                 costo, tipo_costo, valor_original = calcular_costo_concha_de_perla(num_people, cost_data_persona_grupo)
-                            elif servicio == "Kayaking in Tintoreras":
+                            elif servicio == "Kayaking":
                                 costo, tipo_costo, valor_original = calcular_costo_kayaking_in_tintoreras(num_people, cost_data_persona_grupo)
-                            elif servicio == "Sulfur Mines Tour":
+                            elif servicio == "Springs Walk and Swimming Tour":
                                 costo, tipo_costo, valor_original = calcular_costo_sulfur_mines(num_people, cost_data_persona_grupo)
-                            elif servicio == "Private Cuatro Hermanos Snorkeling & Fishing Tour + Tortuga Island":
+                            elif servicio == "Diving Tour - Private":
                                 costo, tipo_costo, valor_original = calcular_costo_cuatro_hermanos(num_people, cost_data_persona_grupo)
-                            elif servicio == "Scuba Diving Isabela":
+                            elif servicio == "Fishing Tour":
                                 costo, tipo_costo, valor_original = calcular_costo_scuba_diving_isabela(num_people, cost_data_persona_grupo)
-                            elif servicio == "Surf Isabela-Half Day":
+                            elif servicio == "Boat trip - Half day":
                                 costo, tipo_costo, valor_original = calcular_costo_surf_isabela_half_day(num_people, cost_data_persona_grupo)
-                            elif servicio == "Surf Isabela-Whole Day":
+                            elif servicio == "Boat trip - Whole day":
                                  costo, tipo_costo, valor_original = calcular_costo_surf_isabela_whole_day(num_people, cost_data_persona_grupo)    
                             elif servicio == "Santa Cruz Highlands Tour":
                                 costo, tipo_costo, valor_original = calcular_costo_santa_cruz_highlands(num_people, cost_data_persona_grupo)
@@ -1016,7 +1016,7 @@ if start_date and end_date:
                                 costo, tipo_costo, valor_original = calcular_costo_scuba_diving_finch_bay(num_people, cost_data_persona_grupo)
                             elif servicio == "Scuba Diving Santa Cruz":
                                  costo, tipo_costo, valor_original = calcular_costo_scuba_diving_santa_cruz(num_people, cost_data_persona_grupo)   
-                            elif servicio == "Free Time at the Beach - Isabela":
+                            elif servicio == "River tour":
                                  costo, tipo_costo, valor_original = calcular_costo_free_time_at_the_beach(num_people, cost_data_persona_grupo)   
 
                             else:
@@ -1035,9 +1035,9 @@ if start_date and end_date:
                                        # Cálculo para Guide
                     if selected_guide[i]:
                         for servicio in selected_guide[i]:
-                            if servicio == "Guide Isabela in English":
+                            if servicio == "Guide - English":
                                 costo, tipo_costo, valor_original = calcular_costo_guide_isabela_english(num_people, cost_data_persona_grupo)
-                            elif servicio == "Guide Isabela in German":
+                            elif servicio == "Guide - German":
                                 costo, tipo_costo, valor_original = calcular_costo_guide_isabela_german(num_people, cost_data_persona_grupo)
                             elif servicio == "Guide Santa Cruz in English":
                                 costo, tipo_costo, valor_original = calcular_costo_guide_santa_cruz_english(num_people, cost_data_persona_grupo)
@@ -1071,7 +1071,7 @@ if start_date and end_date:
                     # Cálculo para Airport Assistance
                     if selected_airport_assistance[i]:
                         for servicio in selected_airport_assistance[i]:
-                            if servicio == "Luggage transport Isabela":
+                            if servicio == "Luggage Transport":
                                 costo, tipo_costo, valor_original = calcular_costo_luggage_transport_isabela(num_people, cost_data_persona_grupo)
                             elif servicio == "Bilingual airport assistant Santa Cruz":
                                 costo, tipo_costo, valor_original = calcular_costo_bilingual_assistant_santa_cruz(num_people, cost_data_persona_grupo)
@@ -1096,7 +1096,7 @@ if start_date and end_date:
                     # Cálculo para Meals
                     if selected_meals[i]:
                         for servicio in selected_meals[i]:
-                            if servicio == "Lunch Pto. Villamil Isabela":
+                            if servicio == "Lunch":
                                 costo, tipo_costo, valor_original = calcular_costo_lunch_pto_villamil(num_people, cost_data_persona_grupo)
                             elif servicio == "Dinner Pto. Ayora Santa Cruz":
                                 costo, tipo_costo, valor_original = calcular_costo_dinner_pto_ayora(num_people, cost_data_persona_grupo)
