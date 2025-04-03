@@ -653,7 +653,7 @@ cost_data_persona_grupo = load_data_from_google_sheets(sheet_url, sheet_name_cos
 
 #st.image(logo, use_column_width=False, width=300)  # Ajusta el ancho según tus preferencias
 # Título de la aplicación
-st.markdown("<div class='title'>Quote Calculator</div>", unsafe_allow_html=True)
+st.markdown("<div class='title'>Touristic Services Quote Calculator</div>", unsafe_allow_html=True)
 
 # Ingreso de la cantidad de personas
 num_people = st.number_input("Number of Pax", min_value=1, value=1)
