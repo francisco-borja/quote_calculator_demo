@@ -1,6 +1,6 @@
 [theme]
-primaryColor = "#4c8c2b"
-backgroundColor = "#FFFFFF"
-secondaryBackgroundColor = "#F0F2F6"
-textColor = "#000000"
-font = "sans serif"
+primaryColor = "#2b4c8c"              # Azul principal (sustituye el verde)
+backgroundColor = "#FFFFFF"          # Fondo blanco
+secondaryBackgroundColor = "#E8F0FA" # Azul claro para áreas secundarias
+textColor = "#000000"                # Texto negro
+font = "sans serif"                  # Fuente predeterminada
